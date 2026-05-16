@@ -108,3 +108,9 @@ img {
 
   border-radius: 50%;
 }
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}

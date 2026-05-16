@@ -12,30 +12,53 @@
 @media (max-width: 900px) {
   .menu-toggle {
     display: block;
+    position: relative;
+    z-index: 1001;
   }
 
   .nav-links {
     position: absolute;
     top: 76px;
-    right: 24px;
+    right: 18px;
+    width: 220px;
+    max-width: calc(100vw - 36px);
+    padding: 18px;
+    border-radius: 18px;
+
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 220px;
-    padding: 20px;
-    border-radius: 18px;
-    background: rgba(3, 15, 28, .95);
+    gap: 14px;
+
+    background: rgba(3, 15, 28, 0.96);
     border: 1px solid var(--border);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+
     opacity: 0;
+    visibility: hidden;
     pointer-events: none;
     transform: translateY(-10px);
-    transition: .25s ease;
+
+    transition: 0.25s ease;
+    z-index: 1000;
   }
 
-  .nav-links.open {
+   .nav-links.open {
     opacity: 1;
+    visibility: visible;
     pointer-events: auto;
     transform: translateY(0);
   }
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+  }
+  
 
   .split-grid,
   .about-grid,
@@ -178,33 +201,59 @@
 }
 
 
-@media (max-width: 1200px) {
-  .menu-toggle {
-    display: block;
-    position: relative;
-    z-index: 999;
+@media (max-width: 560px) {
+  .featured-scroll {
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 18px;
   }
 
-  .nav-links {
-    position: absolute;
-    top: 76px;
-    right: 24px;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 220px;
-    padding: 20px;
-    border-radius: 18px;
-    background: rgba(3, 15, 28, .95);
-    border: 1px solid var(--border);
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-10px);
-    transition: .25s ease;
+  .featured-card,
+  .featured-card.active {
+    width: 100%;
+    min-width: 0;
+    transform: none;
   }
 
-  .nav-links.open {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
+  .featured-img {
+    height: 170px;
+  }
+}
+
+@media (max-width: 560px) {
+  .modal {
+    padding: 16px;
+    align-items: center;
+  }
+
+  .modal-content {
+    width: 100%;
+    max-width: 100%;
+    max-height: 88vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 22px;
+  }
+
+  .modal-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .modal-video {
+    width: 100%;
+    max-height: 65vh;
+    object-fit: contain;
+    background: #000;
+  }
+
+  .modal-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-gallery img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 }
