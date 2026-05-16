@@ -1,0 +1,70 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 8, 18, 0.82);
+  backdrop-filter: blur(10px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  padding: 24px;
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal-content {
+  width: min(900px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  background: rgba(4, 18, 32, 0.96);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: 24px;
+  padding: 28px;
+  position: relative;
+  box-shadow: 0 24px 80px rgba(0, 148, 255, 0.22);
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  background: transparent;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-video {
+  width: 100%;
+  border-radius: 18px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(56, 189, 248, 0.25);
+}
+
+.modal-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.modal-gallery img {
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid rgba(56, 189, 248, 0.25);
+}
+
+@media (max-width: 560px) {
+  .modal-gallery {
+    grid-template-columns: 1fr;
+  }
+}

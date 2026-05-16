@@ -1,0 +1,111 @@
+.filter-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.filter-tabs button {
+  border: 1px solid rgba(56,189,248,.22);
+  background: rgba(255,255,255,.04);
+  color: var(--muted);
+  padding: 10px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.filter-tabs .active {
+  color: #02101f;
+  background: var(--accent);
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.portfolio-card {
+  padding: 14px;
+}
+
+.portfolio-card h3 {
+  padding: 16px 8px 4px;
+  font-size: 1rem;
+}
+
+.portfolio-img {
+  height: 180px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: white;
+}
+
+.youtube-bg { background: linear-gradient(145deg, #ff3838, #0b2035); }
+.edit-bg { background: linear-gradient(145deg, #38bdf8, #0b2035); }
+.tiktok-bg { background: linear-gradient(145deg, #111827, #38bdf8); }
+.web-bg { background: linear-gradient(145deg, #0ea5e9, #02101f); }
+.design-bg { background: linear-gradient(145deg, #2563eb, #020617); }
+.poster-bg { background: linear-gradient(145deg, #0891b2, #020617); }
+
+.featured-scroll {
+  display: grid;
+  grid-template-columns: repeat(3, 320px);
+  justify-content: center;
+  gap: 22px;
+}
+
+.featured-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.featured-card {
+  min-width: 260px;
+  opacity: .75;
+}
+
+.featured-card.active {
+  min-width: 320px;
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+.featured-img {
+  height: 180px;
+  border-radius: 18px;
+  background: linear-gradient(145deg, rgba(56,189,248,.35), rgba(2,12,24,.9));
+  border: 1px solid rgba(56,189,248,.28);
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+.slide-btn {
+  width: 46px;
+  height: 46px;
+  flex: none;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: rgba(8,32,54,.72);
+  color: white;
+  font-size: 1.6rem;
+}
+
+/* Portfolio filter */
+.portfolio-card {
+  cursor: pointer;
+}
+
+.portfolio-card.hide {
+  display: none;
+}
+
+.featured-img i {
+  font-size: 3.5rem;
+  color: var(--accent);
+}
