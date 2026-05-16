@@ -77,13 +77,13 @@ assets/
 
 ## Live Demo
 
-https://YOUR-LINK.vercel.app
+https://haizenvx.vercel.app/
 
 ---
 
 ## GitHub Repository
 
-https://github.com/YOUR-USERNAME/YOUR-REPO
+https://github.com/HaizenVX/Portofolio_Website
 
 ---
 
@@ -99,4 +99,3 @@ https://github.com/YOUR-USERNAME/YOUR-REPO
 ## Author
 
 Muhammad Altaf Adharta  
-DharBlu HIZ
